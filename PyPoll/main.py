@@ -5,8 +5,8 @@ csvpath = os.path.join("election_data.csv")
 
 total_votes = []
 candidates = []
-candidate_names = []
 UniqueNames = []
+
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile,delimiter=',')
     csv_header= next(csvfile)
@@ -14,7 +14,6 @@ with open(csvpath, newline="") as csvfile:
     for row in csvreader:
             total_votes.append(row[0])
             candidates.append(row[2])
-            candidate_names.append(set(row[2]))
             
             if row[2] not in UniqueNames:
                 UniqueNames.append(row[2])

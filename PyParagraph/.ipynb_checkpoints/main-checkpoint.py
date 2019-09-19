@@ -26,3 +26,21 @@ print("Approximate Word Count: {}".format(word_count))
 print("Approximate Sentence Count: {}".format(sentence_count))
 print("Average Letter Count: {:.1f}".format(avg_letter_count))
 print("Average Sentence Length: {:.1f}".format(avg_sentence_length))
+
+#Print results to txt file
+outpath = os.path.join("paragraph_analysis.txt")
+
+with open(outpath, "w", newline="") as datafile:
+    writer = csv.writer(datafile)   
+    datafile.write("Paragraph Analysis")
+    datafile.write("\n")
+    datafile.write("-------------------------")
+    datafile.write("\n")
+    datafile.write("Approximate Word Count: {}".format(word_count))
+    datafile.write("\n")
+    datafile.write("Approximate Sentence Count: {}".format(sentence_count))
+    datafile.write("\n")
+    datafile.write("Average Letter Count: {:.1f}".format(avg_letter_count))
+    datafile.write("\n")
+    datafile.write("Average Sentence Length: {:.1f}".format(avg_sentence_length))
+    datafile.write("\n")

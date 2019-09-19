@@ -1,28 +1,34 @@
+#import dependencies
 import os
 import csv
 
+#Specify csv file
 csvpath = os.path.join("election_data.csv")
 
+#create lists
 total_votes = []
 candidates = []
 UniqueNames = []
 
+#open csv file 
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile,delimiter=',')
     csv_header= next(csvfile)
     
+    #append the information into the lists created
     for row in csvreader:
             total_votes.append(row[0])
             candidates.append(row[2])
             
+            #identify unique names in the candidate list
             if row[2] not in UniqueNames:
                 UniqueNames.append(row[2])
             
-        
+    #create a function that finds the candidate with the most votes    
     def winner(candidates):
             return max(set(candidates), key = candidates.count)
     
-   
+   #Print Results
     print("Election Results")
     print("---------------------------")
     print("Total # of Votes: {}".format(len(total_votes)))

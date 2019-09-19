@@ -1,17 +1,22 @@
+#import dependencies
 import os
 import csv
 
+#Specify csv file
 csvpath = os.path.join("budget_data.csv")
 
+#create lists
 total_months = []
 total_profit = []
 date = []
 monthly_profit_change = []
 
+#open csv file 
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile,delimiter=',')
     csv_header= next(csvfile)
 
+    #append the information into the lists created
     for row in csvreader:
             total_months.append(row[0])
             total_profit.append(int(row[1]))

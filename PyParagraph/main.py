@@ -14,7 +14,7 @@ with open(file, "r") as txtfile:
     
     for line in txtfile:
         words = line.split()
-        word_count += + len(words)
+        word_count += len(words)
         sentence_count += line.count('.') + line.count('!') + line.count('?')
         avg_letter_count +=  (+ len(line)- line.count(" "))/ word_count
         avg_sentence_length = word_count/sentence_count

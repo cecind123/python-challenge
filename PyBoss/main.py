@@ -6,12 +6,12 @@ import csv
 csvpath = os.path.join("employee_data.csv")
 
 #create lists
-emp_id = []
-first_name = []
-last_name = []
-dob =[]
-ssn = []
-state = []
+EmpId = []
+FirstName = []
+LastName = []
+DOB =[]
+SSN = []
+State = []
 
 #Establish state abbreviation dictionary
 us_state_abbrev = {
@@ -67,21 +67,22 @@ us_state_abbrev = {
     'Wyoming': 'WY',
 }
 
+
 #open csv file 
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.DictReader(csvfile)
     
     #append the re-written info into the lists created
     for row in csvreader:
-        emp_id.append(row["Emp ID"])
-        first_name.append(row["Name"].split(" ")[0])
-        last_name.append(row["Name"].split(" ")[1])
-        dob.append(row["DOB"].split("-")[1] + "/" + row["DOB"].split("-")[2] + "/" + row["DOB"].split("-")[0])
-        ssn.append("***-**-" + row["SSN"].split("-")[2])
-        state.append(us_state_abbrev[row["State"]])
+        EmpId.append(row["Emp ID"])
+        FirstName.append(row["Name"].split(" ")[0])
+        LastName.append(row["Name"].split(" ")[1])
+        DOB.append(row["DOB"].split("-")[1] + "/" + row["DOB"].split("-")[2] + "/" + row["DOB"].split("-")[0])
+        SSN.append("***-**-" + row["SSN"].split("-")[2])
+        State.append(us_state_abbrev[row["State"]])
         
 #Zip the info from lists
-new_employee_data = zip(emp_id, first_name, last_name, dob, ssn, state)   
+new_employee_data = zip(EmpId, FirstName, LastName, DOB, SSN, State)   
 
 #Create new output csv file
 output_path = os.path.join("new_employee_data.csv")

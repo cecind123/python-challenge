@@ -1,1 +1,1 @@
-In order to view my Jupyter Notebook file, please visit this direct link. 
+Please view the Jupyter Lab file to see the blocks of code executed. 

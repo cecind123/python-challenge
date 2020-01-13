@@ -1,5 +1,5 @@
 # python-challenge
-In the PyBoss example, I wrote Python scripts to analyze a company's financial records provided in a CSV. 
+In the PyBank example, I wrote Python scripts to analyze a company's financial records provided in a CSV. 
 
 My script determines:
 
@@ -18,3 +18,25 @@ My script determines:
 	-The percentage of votes each candidate won
 	-The total number of votes each candidate won
 	-The winner of the election based on popular vote
+
+In the PyBoss example, I wrote Python scripts to clean/format employee data provided a CSV. 
+
+My script makes the following changes to the CSV:
+
+	-The Name column is split into separate First Name and Last Name columns.
+	-The DOB data is re-written into MM/DD/YYYY format.
+	-The SSN data is re-written such that the first five numbers are hidden from view.
+	-The State data is re-written as simple two-letter abbreviations.
+
+In the PyParagraph example, I wrote Python scripts to automate the analysis of any passage/text file. 
+
+My script provides the following metrics:
+
+	-Approximate word count
+	-Approximate sentence count
+	-Approximate letter count (per word)
+	-Average sentence length (in words)
+
+
+
+
